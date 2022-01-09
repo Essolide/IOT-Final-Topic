@@ -189,25 +189,25 @@
                                           </block>
                                         </value>
                                         <next>
-                                          <block type="variables_set" id="wPEcux_BY(@9{*leZnOM">
-                                            <field name="VAR">二氧化碳感測器電壓值</field>
-                                            <value name="VALUE">
-                                              <block type="io_analogread_var" id="Qj4rk@qhb3i:P{tyx98h">
-                                                <value name="PIN">
-                                                  <block type="io_analogpins" id="=COv@RJ4#n5^]d4GGvWE">
-                                                    <field name="PIN">A0</field>
-                                                  </block>
-                                                </value>
+                                          <block type="controls_repeat_ext" id="`C`3NLP3o1Rp6vS]YE_U">
+                                            <value name="TIMES">
+                                              <block type="math_number" id="C`nb@{E3n@3))PO~:;cn">
+                                                <field name="NUM">10</field>
                                               </block>
                                             </value>
-                                            <next>
-                                              <block type="controls_repeat_ext" id="`C`3NLP3o1Rp6vS]YE_U">
-                                                <value name="TIMES">
-                                                  <block type="math_number" id="C`nb@{E3n@3))PO~:;cn">
-                                                    <field name="NUM">10</field>
+                                            <statement name="DO">
+                                              <block type="variables_set" id="wPEcux_BY(@9{*leZnOM">
+                                                <field name="VAR">二氧化碳感測器電壓值</field>
+                                                <value name="VALUE">
+                                                  <block type="io_analogread_var" id="Qj4rk@qhb3i:P{tyx98h">
+                                                    <value name="PIN">
+                                                      <block type="io_analogpins" id="=COv@RJ4#n5^]d4GGvWE">
+                                                        <field name="PIN">A0</field>
+                                                      </block>
+                                                    </value>
                                                   </block>
                                                 </value>
-                                                <statement name="DO">
+                                                <next>
                                                   <block type="controls_if" id="=={8SgZc[5=G}P|eA)k6">
                                                     <value name="IF0">
                                                       <block type="logic_compare" id="nITi_^*CL.q)+Ii?khLA">
@@ -506,24 +506,24 @@
                                                       <block type="time_delay" id="yE;}ND+LjK5v=-R0^u~c">
                                                         <value name="DELAY_TIME_MILI">
                                                           <block type="math_number" id="8TO[PXU62C*_%;piB9Wo">
-                                                            <field name="NUM">15000</field>
+                                                            <field name="NUM">5000</field>
                                                           </block>
                                                         </value>
                                                       </block>
                                                     </next>
                                                   </block>
-                                                </statement>
-                                                <next>
-                                                  <block type="math_change2" id="hWNkbU*lN+s2)7D|S9RR">
-                                                    <field name="VAR">計數器</field>
-                                                    <field name="OP">+</field>
-                                                    <value name="DELTA">
-                                                      <block type="math_number" id="Jw)_r8@t[qggex*2I3~%">
-                                                        <field name="NUM">1</field>
-                                                      </block>
-                                                    </value>
-                                                  </block>
                                                 </next>
+                                              </block>
+                                            </statement>
+                                            <next>
+                                              <block type="math_change2" id="hWNkbU*lN+s2)7D|S9RR">
+                                                <field name="VAR">計數器</field>
+                                                <field name="OP">+</field>
+                                                <value name="DELTA">
+                                                  <block type="math_number" id="Jw)_r8@t[qggex*2I3~%">
+                                                    <field name="NUM">1</field>
+                                                  </block>
+                                                </value>
                                               </block>
                                             </next>
                                           </block>
